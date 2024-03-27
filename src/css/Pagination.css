@@ -1,0 +1,59 @@
+/* --------------PAGINADO-------------- */
+
+.paginado{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+.content_btn_page{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.change_page{
+    color: #ffffff;
+    width: 40px;
+    height: 37px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    border: none;
+    background-color: rgba(235, 226, 99, 0.539);
+    cursor: pointer;
+}
+.change_page:hover{
+    background-color: rgb(226, 213, 29);
+    color: #000000;
+}
+.btn_page{
+    color: #ffffff;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    font-size: .7rem;
+    border-radius: 50% 50%;
+    border: none;
+    background-color: rgba(237, 224, 51, 0.539);
+    cursor: pointer;
+}
+.btn_page:hover{
+    transform: scale(1.1);
+    background-color: rgb(226, 213, 29);
+    color: #000000;
+    font-weight: bolder;
+}
+.custom_btn{
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+}
+.activo{
+    transform: scale(1.1);
+    background-color: rgb(226, 213, 29);
+    color: #000000;
+    font-weight: bolder;
+}

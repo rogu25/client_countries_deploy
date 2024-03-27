@@ -1,0 +1,168 @@
+.contenedor_card_detalle_countrie {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card_detalle_countrie {
+    margin-top: 50px;
+    border: 2px solid rgba(250, 128, 114, 0.29);
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.detalle_countrie{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor_imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content_img {
+    width: 180px;
+    height: 90px;
+}
+
+.img_pais {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+.content_encabezado {
+    width: 60%;
+    padding-left: 30px;
+}
+
+/* ------------barra de scroll------------- */
+.content_activities {
+    border-left: 2px solid rgba(250, 128, 114, 0.29);
+    width: 50%;
+    height: 500px;
+    overflow: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_activities::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.content_activities::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.content_activities::-webkit-scrollbar-button:increment,
+.content_activities::-webkit-scrollbar-button {
+    display: none;
+}
+
+.content_activities::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.content_activities::-webkit-scrollbar-thumb {
+    background-color: rgba(250, 128, 114, 0.156);
+    border-radius: 20px;
+    border: 1px solid #fa8072;
+}
+
+.content_activities::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* -------------------------------------------- */
+
+.description_activities {
+    border-bottom: 2px solid rgba(250, 128, 114, 0.29);
+    padding-left: 10px;
+}
+.description_activities h4{
+    text-decoration: underline rgba(250, 128, 114, 0.823);
+}
+
+.t_activities {
+    text-align: center;
+}
+
+/* -------barra de rango */
+.rango {
+    text-align: center;
+}
+
+
+
+/* --------lista de actividades-------- */
+.activar_lista{
+    display: none;
+}
+.lista_activity{
+    text-align: center;
+    width: 90%;
+}
+.content_seleccionados{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.content_seleccionados span{
+    margin-top: 5px;
+}
+
+.content_seleccionados span button{
+    margin-left: 5px;
+    border: none;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: transparent;
+    color: #e92424;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.content_seleccionados p{
+    color: #e92424;
+}
+
+.content_botones_lista{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* ----------contenedor de botones.------------ */
+
+.content_botones{
+    width: 70%;
+    height: 40px;
+    margin-top: 5px;
+    border: 2px solid rgba(250, 128, 114, 0.29);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn_detalle{
+    border: 2px solid rgba(250, 128, 114, 0.29);
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+}

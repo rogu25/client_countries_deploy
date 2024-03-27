@@ -1,0 +1,9 @@
+.App {
+  background-image: url("./img/fondo_03.jpg");
+  mask-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
