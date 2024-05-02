@@ -1,9 +1,10 @@
-import { ALL_COUNTRIES, FIND_NAME_COUNTRIES, FIND_ID_COUNTRY, GET_ALL_ACTIVITY, CREATE_ACTIVITIES } from "../action";
+import { ALL_COUNTRIES, FIND_NAME_COUNTRIES, FIND_ID_COUNTRY, GET_ALL_ACTIVITY, CREATE_ACTIVITIES, FILTRADO_COUNTRIES } from "../action";
 
 const initialState = {
-    countries: [],
+    countries: {filtro: "",countries:[]},
+    nameFiltro: "",
     mensaje: "",
-    avisos:{},
+    avisos: {},
     detalle_country: {},
     activities: []
 };
@@ -13,13 +14,13 @@ const rootReducer = (state = initialState, action) => {
         case ALL_COUNTRIES:
             return {
                 ...state,
-                countries: action.payload
+                countries: {filtro:"", countries: action.payload}
             }
 
         case FIND_NAME_COUNTRIES:
             return {
                 ...state,
-                countries: action.payload,
+                countries:{filtro:"", countries: action.payload},
                 mensaje: action.payload.mensaje && action.payload.mensaje
             }
         case FIND_ID_COUNTRY:
@@ -40,7 +41,13 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 avisos: action.payload.mensaje ? {
                     mensaje: action.payload.mensaje
-                } : {error: action.payload.error}
+                } : { error: action.payload.error }
+            }
+
+        case FILTRADO_COUNTRIES:
+            return {
+                ...state,
+                countries: action.payload
             }
 
         default:

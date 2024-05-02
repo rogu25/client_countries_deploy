@@ -8,6 +8,7 @@ import Loading from "../components/Loading.js";
 
 import "../css/Countries.css";
 import Pagination from './Pagination';
+import CardFilter from './CardFilter.js';
 
 function Countries() {
 
@@ -24,8 +25,8 @@ function Countries() {
 
   // const [activo, setActivo] = useState(false);
 
-  let contadorCountries = countries.length;
-  let contadorPage = Math.ceil(countries.length / 9.9);
+  let contadorCountries = countries.countries.length;
+  let contadorPage = Math.ceil(countries.countries.length / 9.9);
   const items = 10;
   const page = 5;
 
@@ -143,18 +144,18 @@ function Countries() {
   };
 
   useEffect(() => {
-    !countries.length && dispatch(get_all_countries());
-  }, [countries, dispatch]);
+    !countries.countries.length && dispatch(get_all_countries());
+  }, [countries.countries, dispatch]);
 
 
   return (
     <React.Fragment>
-
+      <CardFilter countries = {countries.countries}/>
       <Pagination elementos={elementos} inicio={backpage} final={nextpage} id={id} onclickSelectPage={onclickSelectPage} onclickNextPage={onclickNextPage} onclickBackPage={onclickBackPage} onclickChangeNextPage={onclickChangeNextPage} onclickChangeBackPage={onclickChangeBackPage} onclickCallBack={onclickCallBack} />
 
       <div className='content_countries'>
         {
-          countries.length ? countries.map((c) => {
+          countries.countries.length ? countries.countries.map((c) => {
             return (
               <CardCountry key={c.id} id={c.id} imagen={c.imagen} nombre={c.name} continente={c.continente} poblacion={c.poblacion} onclickSelectCardCountrie={onclickSelectCardCountrie}/>
             )

@@ -1,0 +1,25 @@
+.contenedor_filter {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content_select {
+    margin-bottom: 50px;
+}
+
+.content_select select {
+    cursor: pointer;
+    text-shadow: none;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgba(230, 246, 246, 0.264);
+    color: #ffffff;
+}
+
+.content_select option {
+    background-color: #000000;
+    color: #ffffff;
+}

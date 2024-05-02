@@ -4,6 +4,7 @@ import "../css/Home.css";
 
 import Countries from '../components/Countries';
 import Navbar from '../components/Navbar';
+// import CardFilter from '../components/CardFilter';
 
 function Home() {
   return (

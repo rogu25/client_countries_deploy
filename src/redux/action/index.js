@@ -6,6 +6,7 @@ export const GET_NAME_COUNTRY = "GET_NAME_COUNTRY";
 export const FIND_ID_COUNTRY = "FIND_ID_COUNTRY";
 export const GET_ALL_ACTIVITY = "GET_ALL_ACTIVITY";
 export const CREATE_ACTIVITIES = "CREATE_ACTIVITIES"; 
+export const FILTRADO_COUNTRIES = "FILTRADO_COUNTRIES";
 
 //------------------ request pokemons ----------------
 
@@ -82,6 +83,23 @@ export const create_activities = (obj) => async (dispatch) => {
         return dispatch({
             type: CREATE_ACTIVITIES,
             payload: error
+        });
+    }
+}
+
+// --------- filtros ------
+
+export const filtradoCountries = (countries, filtro) => async (dispatch) => {
+    try {
+        return dispatch({
+            type: FILTRADO_COUNTRIES,
+            payload: countries,
+            filtros:filtro
+        });
+    } catch (error) {
+        return dispatch({
+            type: FILTRADO_COUNTRIES,
+            payload: {mensaje: error}
         });
     }
 }
