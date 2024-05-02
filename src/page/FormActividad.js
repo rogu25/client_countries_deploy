@@ -19,7 +19,7 @@ function FormActividad() {
   return (
     <div className='contenedor_form_activity'>
       {
-        <CardFormActivity paises={ paises }/>
+        <CardFormActivity paises={ paises.countries }/>
       }
     </div>
   )
